@@ -7,6 +7,14 @@
 	scrollbar-width: none;
 }
 
+.bigger-text {
+	font-size: 7rem;
+}
+
+.big-text {
+	font-size: 3rem;
+}
+
 body {
 	font-family: Montserrat, sans-serif;
 	font-weight: 400;
@@ -71,8 +79,8 @@ h2 {
 /* logo que se mueve */
 
 .circulo {
-	width: 35px;
-	height: 35px;
+	width: 10rem;
+	height: 10rem;
 	border-radius: 50%;
 	position: relative;
 	overflow: hidden;
@@ -80,13 +88,13 @@ h2 {
 }
 
 .circulo-container {
-	width: 45px;
+	width: 12rem;
+	height: 12rem;
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 45px;
-	background-image: linear-gradient(#9fa4d180, #7c72a030);
+	background-image: linear-gradient(#9fc1d170, #63779b15);
 }
 
 .circulo-fondo {
@@ -99,7 +107,7 @@ h2 {
 
 .ondas {
 	bottom: 0px;
-	background-color: rgb(7, 169, 245);
+	background-color: #35b6f2;
 	position: absolute;
 	width: 100%;
 	height: 70%;
@@ -112,12 +120,12 @@ h2 {
 
 .azul {
 	animation-direction: alternate-reverse;
-	background-color: #F28D35;
+	background-color: #35b6f2;
 	border-radius: 22% 100% 30% 0px / 0% 88% 0px 0px;
 }
 
 .celeste {
-	background-color: #0ba2fa63;
+	background-color: #297ea573;
 	border-radius: 100rgba(130, 176, 202, 0.388)0px / 88% 0px 0px 0px;
 }
 
