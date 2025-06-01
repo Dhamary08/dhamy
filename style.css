@@ -4,7 +4,9 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	scrollbar-width: none;
 }
+
 body {
 	font-family: Montserrat, sans-serif;
 	font-weight: 400;
@@ -17,14 +19,16 @@ body {
 }
 
 .contenedor {
-	width: 100vw;
+	width: calc(100vw-5);
 	height: 100vh;
 	padding: 0;
 	margin: 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
 }
+
 .targetaPrincipal {
 	position: relative;
 	display: flex;
@@ -45,9 +49,12 @@ body {
 .text-center {
 	text-align: center;
 }
-h1, h2{
+
+h1,
+h2 {
 	color: #f1f1f1;
 }
+
 @media (max-width: 768px) {
 	h1 {
 		font-size: 1.5rem;
@@ -71,6 +78,7 @@ h1, h2{
 	overflow: hidden;
 	box-shadow: 1px 2px 4px #1207b1;
 }
+
 .circulo-container {
 	width: 45px;
 	border-radius: 50%;
@@ -80,6 +88,7 @@ h1, h2{
 	height: 45px;
 	background-image: linear-gradient(#9fa4d180, #7c72a030);
 }
+
 .circulo-fondo {
 	position: absolute;
 	width: 100%;
@@ -87,6 +96,7 @@ h1, h2{
 	background-color: transparent;
 	background-image: radial-gradient(#0cadf880, #0178ff30);
 }
+
 .ondas {
 	bottom: 0px;
 	background-color: rgb(7, 169, 245);
@@ -99,27 +109,33 @@ h1, h2{
 	animation-direction: alternate;
 	animation-iteration-count: infinite;
 }
+
 .azul {
 	animation-direction: alternate-reverse;
 	background-color: #F28D35;
 	border-radius: 22% 100% 30% 0px / 0% 88% 0px 0px;
 }
+
 .celeste {
 	background-color: #0ba2fa63;
 	border-radius: 100rgba(130, 176, 202, 0.388)0px / 88% 0px 0px 0px;
 }
+
 @keyframes move {
 	from {
 		border-radius: 100% 22% 0% 0px / 88% 0px 0px 0px;
 	}
+
 	to {
 		border-radius: 22% 100% 30% 0px / 0% 88% 0px 0px;
 	}
 }
-body{
+
+body {
 	position: relative;
 }
-#particles-js{
+
+#particles-js {
 	position: absolute;
 	top: 0;
 	right: 0;
