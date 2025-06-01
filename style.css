@@ -18,7 +18,7 @@
 body {
 	font-family: Montserrat, sans-serif;
 	font-weight: 400;
-	background-color: #244e73;
+	background-color: #3798b1;
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -43,7 +43,7 @@ body {
 	flex-direction: column;
 	width: 90%;
 	height: 70%;
-	background-color: #f28d356c;
+	background-color: #31679765;
 	background-clip: border-box;
 	border-radius: 11rem 1rem 11rem 1rem;
 }
