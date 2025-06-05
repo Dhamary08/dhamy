@@ -67,6 +67,14 @@ h2 {
 	h1 {
 		font-size: 1.5rem;
 	}
+
+	.bigger-text {
+		font-size: 3rem;
+	}
+
+	.big-text {
+		font-size: 0.8rem;
+	}
 }
 
 @media (max-width: 768px) and (orientation: landscape) {
