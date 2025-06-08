@@ -38,7 +38,7 @@
 
 <script setup>
 import { computed } from "vue";
-import { useHead } from "#app";
+import { useHead } from "~/app";
 import { useI18n } from "~/composables/useI18n";
 
 const { t } = useI18n();
