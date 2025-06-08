@@ -1,0 +1,203 @@
+{
+  "common": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "weather": "Météo",
+    "blog": "Blog",
+    "contact": "Contact",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "search": "Rechercher",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "page": "Page",
+    "of": "de",
+    "readMore": "Lire plus",
+    "backTo": "Retour à",
+    "send": "Envoyer",
+    "name": "Nom",
+    "email": "Email",
+    "subject": "Sujet",
+    "message": "Message"
+  },
+  "navigation": {
+    "toggleTheme": "Changer de thème",
+    "lightTheme": "Thème clair",
+    "darkTheme": "Thème sombre",
+    "systemTheme": "Thème système",
+    "language": "Langue"
+  },
+  "home": {
+    "title": "Bienvenue à Ma Présentation",
+    "subtitle": "Un site web de présentation simple et élégant construit avec Nuxt 3",
+    "learnMore": "En savoir plus",
+    "contactUs": "Nous contacter",
+    "features": {
+      "title": "Nos Fonctionnalités",
+      "performance": {
+        "title": "Performance Rapide",
+        "description": "Optimisé pour la vitesse et l'efficacité pour offrir la meilleure expérience utilisateur."
+      },
+      "design": {
+        "title": "Design Magnifique",
+        "description": "Design propre et moderne qui met en valeur votre contenu efficacement."
+      },
+      "responsive": {
+        "title": "Design Responsive",
+        "description": "Superbe sur tous les appareils, des téléphones mobiles aux ordinateurs de bureau."
+      },
+      "seo": {
+        "title": "Optimisé SEO",
+        "description": "Conçu avec l'optimisation pour les moteurs de recherche à l'esprit pour améliorer la visibilité."
+      }
+    }
+  },
+  "about": {
+    "title": "À Propos de Nous",
+    "intro": "Bienvenue sur notre site web de présentation. Nous sommes une équipe d'individus passionnés dédiés à créer des expériences incroyables pour nos clients.",
+    "mission": "Notre mission est de livrer des solutions de haute qualité qui répondent aux besoins uniques de chaque client. Avec des années d'expérience dans l'industrie, nous avons développé une compréhension profonde de ce qu'il faut pour créer des projets réussis.",
+    "innovation": "Nous croyons au pouvoir de l'innovation et de l'amélioration continue. C'est pourquoi nous restons à jour avec les dernières technologies et meilleures pratiques dans notre domaine.",
+    "team": {
+      "title": "Notre Équipe",
+      "ceo": {
+        "name": "Jean Dupont",
+        "position": "PDG et Fondateur",
+        "bio": "Jean a plus de 15 ans d'expérience dans l'industrie et dirige la vision de notre entreprise."
+      },
+      "creative": {
+        "name": "Marie Martin",
+        "position": "Directrice Créative",
+        "bio": "Marie apporte des solutions créatives aux problèmes complexes avec son approche innovante."
+      },
+      "technical": {
+        "name": "Pierre Durand",
+        "position": "Responsable Technique",
+        "bio": "Pierre s'assure que nos implémentations techniques sont robustes et évolutives."
+      },
+      "marketing": {
+        "name": "Sophie Moreau",
+        "position": "Spécialiste Marketing",
+        "bio": "Sophie aide nos clients à atteindre leur public cible avec des stratégies efficaces."
+      }
+    }
+  },
+  "services": {
+    "title": "Nos Services",
+    "intro": "Nous offrons une large gamme de services pour aider votre entreprise à réussir dans le monde numérique. Notre équipe d'experts est prête à vous assister avec vos besoins spécifiques.",
+    "cta": {
+      "title": "Prêt à commencer ?",
+      "description": "Contactez-nous aujourd'hui pour discuter des exigences de votre projet.",
+      "button": "Nous contacter"
+    },
+    "webDev": {
+      "title": "Développement Web",
+      "description": "Nous créons des sites web modernes et responsifs qui sont superbes sur tous les appareils.",
+      "features": [
+        "Design de site web personnalisé",
+        "Solutions e-commerce",
+        "Systèmes de gestion de contenu",
+        "Maintenance de site web"
+      ]
+    },
+    "mobileDev": {
+      "title": "Développement d'Applications Mobiles",
+      "description": "Applications mobiles natives et multiplateformes pour iOS et Android.",
+      "features": [
+        "Développement d'applications iOS",
+        "Développement d'applications Android",
+        "Solutions multiplateformes",
+        "Maintenance et mises à jour d'applications"
+      ]
+    },
+    "uiux": {
+      "title": "Design UI/UX",
+      "description": "Design centré sur l'utilisateur qui améliore l'expérience utilisateur et l'engagement.",
+      "features": [
+        "Recherche utilisateur",
+        "Wireframing et prototypage",
+        "Design visuel",
+        "Tests d'utilisabilité"
+      ]
+    },
+    "marketing": {
+      "title": "Marketing Digital",
+      "description": "Solutions marketing stratégiques pour développer votre présence en ligne.",
+      "features": [
+        "Optimisation pour les moteurs de recherche (SEO)",
+        "Marketing des réseaux sociaux",
+        "Marketing de contenu",
+        "Campagnes d'email marketing"
+      ]
+    }
+  },
+  "weather": {
+    "title": "Météo",
+    "intro": "Consultez la météo actuelle de n'importe quelle ville du monde ou utilisez votre localisation actuelle.",
+    "searchPlaceholder": "Rechercher une ville...",
+    "myLocation": "Ma localisation",
+    "forecast5Days": "Voir les prévisions sur 5 jours",
+    "forecast": "Prévisions sur 5 jours",
+    "feelsLike": "Ressenti",
+    "humidity": "Humidité",
+    "wind": "Vent",
+    "pressure": "Pression",
+    "visibility": "Visibilité",
+    "sunrise": "Lever du soleil",
+    "sunset": "Coucher du soleil",
+    "loadingWeather": "Chargement de la météo...",
+    "loadingForecast": "Chargement des prévisions...",
+    "errorLocation": "Erreur lors de l'obtention de la localisation",
+    "errorWeather": "Erreur lors de l'obtention de la météo"
+  },
+  "blog": {
+    "title": "Blog",
+    "intro": "Explorez nos articles et restez à jour avec les dernières nouvelles et mises à jour.",
+    "postsPerPage": "Articles par page",
+    "loadingPosts": "Chargement des articles...",
+    "errorPosts": "Erreur lors du chargement des articles",
+    "backToBlog": "Retour au blog",
+    "comments": "Commentaires",
+    "noComments": "Aucun commentaire pour le moment.",
+    "loadingComments": "Chargement des commentaires..."
+  },
+  "contact": {
+    "title": "Nous Contacter",
+    "intro": "Vous avez des questions ou voulez discuter d'un projet ? Remplissez le formulaire ci-dessous et nous vous répondrons dès que possible.",
+    "form": {
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "Email",
+      "emailPlaceholder": "Votre adresse email",
+      "subject": "Sujet",
+      "subjectPlaceholder": "Sujet de votre message",
+      "message": "Message",
+      "messagePlaceholder": "Votre message",
+      "send": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "success": "Votre message a été envoyé avec succès ! Nous vous répondrons bientôt.",
+      "error": "Il y a eu une erreur lors de l'envoi de votre message. Veuillez réessayer."
+    },
+    "info": {
+      "title": "Informations de Contact",
+      "address": "Adresse",
+      "addressValue": "123 Rue des Affaires, Suite 100\nVille, État 12345",
+      "email": "Email",
+      "emailValue": "info@mapresentation.com",
+      "phone": "Téléphone",
+      "phoneValue": "+33 1 23 45 67 89",
+      "hours": "Heures d'Ouverture",
+      "hoursValue": "Lundi - Vendredi : 9h - 17h\nSamedi et Dimanche : Fermé"
+    }
+  },
+  "footer": {
+    "description": "Un site web de présentation simple construit avec Nuxt 3",
+    "quickLinks": "Liens Rapides",
+    "copyright": "Tous droits réservés."
+  },
+  "theme": {
+    "light": "Clair",
+    "dark": "Sombre",
+    "system": "Système"
+  }
+}
