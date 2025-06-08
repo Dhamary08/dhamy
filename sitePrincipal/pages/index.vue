@@ -22,9 +22,9 @@
         <h2 class="section-title">{{ t("home.features.title") }}</h2>
         <div class="features-grid">
           <div
-            class="feature-card"
             v-for="(feature, index) in features"
             :key="index"
+            class="feature-card"
           >
             <div class="feature-icon">{{ feature.icon }}</div>
             <h3 class="feature-title">{{ feature.title }}</h3>
@@ -38,7 +38,7 @@
 
 <script setup>
 import { computed } from "vue";
-//import { useHead } from "#app";
+import { useHead } from "#app";
 import { useI18n } from "~/composables/useI18n";
 
 const { t } = useI18n();

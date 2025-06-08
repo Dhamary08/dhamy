@@ -1,5 +1,5 @@
-import { defineNuxtPlugin } from "./app";
-import { useAppStore } from "../stores/app";
+import { defineNuxtPlugin } from "#app";
+import { useAppStore } from "~/stores/app";
 
 export default defineNuxtPlugin(() => {
   const appStore = useAppStore();

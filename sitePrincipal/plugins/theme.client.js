@@ -1,4 +1,4 @@
-import { defineNuxtPlugin } from "~/plugins/app";
+import { defineNuxtPlugin } from "#app";
 import { useAppStore } from "~/stores/app";
 
 export default defineNuxtPlugin(() => {

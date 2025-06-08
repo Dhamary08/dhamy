@@ -1,4 +1,4 @@
-import { defineNuxtPlugin } from "~/plugins/app";
+import { defineNuxtPlugin } from "#app";
 
 export default defineNuxtPlugin((nuxtApp) => {
   // Default SEO values
