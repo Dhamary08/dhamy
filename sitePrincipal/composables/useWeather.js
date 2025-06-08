@@ -1,7 +1,10 @@
 import { ref, reactive } from "vue";
 import { weatherService } from "~/services/weather";
+import { useI18n } from "~/composables/useI18n";
 
 export function useWeather() {
+  const { t } = useI18n();
+
   const currentWeather = ref(null);
   const forecast = ref(null);
   const loading = ref(false);
@@ -11,6 +14,7 @@ export function useWeather() {
     lastSearchedCity: "",
     userLocation: null,
     units: "metric", // metric, imperial, kelvin
+    isUsingMockData: false,
   });
 
   /**
@@ -21,13 +25,30 @@ export function useWeather() {
 
     loading.value = true;
     error.value = null;
+    state.isUsingMockData = false;
 
     try {
       const data = await weatherService.getCurrentWeather(city);
       currentWeather.value = data;
       state.lastSearchedCity = city;
+
+      // Verificar si estamos usando datos de ejemplo
+      if (data.name === city && data.main.temp === 22.5) {
+        state.isUsingMockData = true;
+      }
     } catch (err) {
-      error.value = `Error al obtener el clima de ${city}: ${err.message}`;
+      console.error("Error fetching weather:", err);
+
+      if (err.statusCode === 401) {
+        error.value = t("weather.errorApiKey");
+      } else if (err.statusCode === 404) {
+        error.value = t("weather.errorCityNotFound", { city });
+      } else {
+        error.value = `${t("weather.errorWeather")}: ${
+          err.message || err.statusMessage || "Error desconocido"
+        }`;
+      }
+
       currentWeather.value = null;
     } finally {
       loading.value = false;
@@ -39,12 +60,13 @@ export function useWeather() {
    */
   async function fetchWeatherByLocation() {
     if (!navigator.geolocation) {
-      error.value = "La geolocalización no está disponible en este navegador";
+      error.value = t("weather.errorGeolocation");
       return;
     }
 
     loading.value = true;
     error.value = null;
+    state.isUsingMockData = false;
 
     try {
       const position = await getCurrentPosition();
@@ -58,8 +80,35 @@ export function useWeather() {
       );
       currentWeather.value = data;
       state.lastSearchedCity = data.name;
+
+      // Verificar si estamos usando datos de ejemplo
+      if (data.main.temp === 22.5) {
+        state.isUsingMockData = true;
+      }
     } catch (err) {
-      error.value = `Error al obtener ubicación: ${err.message}`;
+      console.error("Error fetching weather by location:", err);
+
+      if (err.code) {
+        // Error de geolocalización
+        switch (err.code) {
+          case err.PERMISSION_DENIED:
+            error.value = t("weather.errorLocationPermission");
+            break;
+          case err.POSITION_UNAVAILABLE:
+            error.value = t("weather.errorLocationUnavailable");
+            break;
+          case err.TIMEOUT:
+            error.value = t("weather.errorLocationTimeout");
+            break;
+          default:
+            error.value = t("weather.errorLocation");
+            break;
+        }
+      } else {
+        error.value = `${t("weather.errorLocation")}: ${
+          err.message || err.statusMessage || "Error desconocido"
+        }`;
+      }
     } finally {
       loading.value = false;
     }
@@ -78,7 +127,10 @@ export function useWeather() {
       const data = await weatherService.getForecast(city);
       forecast.value = data;
     } catch (err) {
-      error.value = `Error al obtener pronóstico: ${err.message}`;
+      console.error("Error fetching forecast:", err);
+      error.value = `${t("weather.errorForecast")}: ${
+        err.message || err.statusMessage || "Error desconocido"
+      }`;
       forecast.value = null;
     } finally {
       loading.value = false;

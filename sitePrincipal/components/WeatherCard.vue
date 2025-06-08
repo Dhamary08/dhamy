@@ -1,7 +1,7 @@
 <template>
   <div class="weather-card">
     <div v-if="loading" class="loading">
-      <p>Cargando clima...</p>
+      <p>{{ t("weather.loadingWeather") }}</p>
     </div>
 
     <div v-else-if="error" class="error">
@@ -9,6 +9,11 @@
     </div>
 
     <div v-else-if="weather" class="weather-content">
+      <!-- Aviso de datos de ejemplo -->
+      <div v-if="isUsingMockData" class="demo-notice">
+        <p>{{ t("weather.demoDataNotice") }}</p>
+      </div>
+
       <div class="weather-header">
         <h2 class="city-name">{{ weather.name }}, {{ weather.sys.country }}</h2>
         <p class="weather-date">{{ formatDate(weather.dt) }}</p>
@@ -32,7 +37,7 @@
         <div class="weather-description">
           <p class="description">{{ weather.weather[0].description }}</p>
           <p class="feels-like">
-            Sensación térmica:
+            {{ t("weather.feelsLike") }}:
             {{ formatTemperature(weather.main.feels_like) }}°C
           </p>
         </div>
@@ -40,19 +45,19 @@
 
       <div class="weather-details">
         <div class="detail-item">
-          <span class="detail-label">Humedad</span>
+          <span class="detail-label">{{ t("weather.humidity") }}</span>
           <span class="detail-value">{{ weather.main.humidity }}%</span>
         </div>
         <div class="detail-item">
-          <span class="detail-label">Viento</span>
+          <span class="detail-label">{{ t("weather.wind") }}</span>
           <span class="detail-value">{{ weather.wind.speed }} m/s</span>
         </div>
         <div class="detail-item">
-          <span class="detail-label">Presión</span>
+          <span class="detail-label">{{ t("weather.pressure") }}</span>
           <span class="detail-value">{{ weather.main.pressure }} hPa</span>
         </div>
         <div class="detail-item">
-          <span class="detail-label">Visibilidad</span>
+          <span class="detail-label">{{ t("weather.visibility") }}</span>
           <span class="detail-value"
             >{{ (weather.visibility / 1000).toFixed(1) }} km</span
           >
@@ -61,11 +66,11 @@
 
       <div class="sun-times">
         <div class="sun-time">
-          <span class="sun-label">🌅 Amanecer</span>
+          <span class="sun-label">🌅 {{ t("weather.sunrise") }}</span>
           <span class="sun-value">{{ formatTime(weather.sys.sunrise) }}</span>
         </div>
         <div class="sun-time">
-          <span class="sun-label">🌇 Atardecer</span>
+          <span class="sun-label">🌇 {{ t("weather.sunset") }}</span>
           <span class="sun-value">{{ formatTime(weather.sys.sunset) }}</span>
         </div>
       </div>
@@ -75,6 +80,7 @@
 
 <script setup>
 import { useWeather } from "~/composables/useWeather";
+import { useI18n } from "~/composables/useI18n"; // moved inside the conditional
 
 defineProps({
   weather: {
@@ -89,7 +95,14 @@ defineProps({
     type: String,
     default: null,
   },
+  isUsingMockData: {
+    type: Boolean,
+    default: false,
+  },
 });
+
+const { t: i18nTranslate } = useI18n();
+const t = i18nTranslate;
 
 const { formatTemperature, formatDate, formatTime, getWeatherIcon } =
   useWeather();
@@ -107,6 +120,16 @@ const { formatTemperature, formatDate, formatTime, getWeatherIcon } =
   color: white;
   box-shadow: var(--shadow-lg);
   backdrop-filter: blur(10px);
+}
+
+.demo-notice {
+  background-color: rgba(255, 193, 7, 0.9);
+  color: #333;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  text-align: center;
 }
 
 .loading,

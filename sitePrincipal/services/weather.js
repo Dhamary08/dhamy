@@ -1,17 +1,12 @@
 import { fetchApi } from "./api";
 
-const BASE_URL = "https://api.openweathermap.org/data/2.5";
-// Para desarrollo, puedes usar esta API key de prueba (limitada)
-// En producción, deberías obtener tu propia API key en: https://openweathermap.org/api
-const API_KEY = "b337851b26efb2dcde1d47cd130ba016"; // Reemplaza con tu API key real
-
 export const weatherService = {
   /**
    * Obtiene el clima actual por nombre de ciudad
    */
   async getCurrentWeather(city) {
     return await fetchApi(
-      `${BASE_URL}/weather?q=${city}&appid=${API_KEY}&units=metric&lang=es`
+      `/api/weather/current?city=${encodeURIComponent(city)}`
     );
   },
 
@@ -19,9 +14,7 @@ export const weatherService = {
    * Obtiene el clima actual por coordenadas
    */
   async getCurrentWeatherByCoords(lat, lon) {
-    return await fetchApi(
-      `${BASE_URL}/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=es`
-    );
+    return await fetchApi(`/api/weather/current?lat=${lat}&lon=${lon}`);
   },
 
   /**
@@ -29,7 +22,7 @@ export const weatherService = {
    */
   async getForecast(city) {
     return await fetchApi(
-      `${BASE_URL}/forecast?q=${city}&appid=${API_KEY}&units=metric&lang=es`
+      `/api/weather/forecast?city=${encodeURIComponent(city)}`
     );
   },
 
@@ -37,9 +30,7 @@ export const weatherService = {
    * Obtiene el pronóstico por coordenadas
    */
   async getForecastByCoords(lat, lon) {
-    return await fetchApi(
-      `${BASE_URL}/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=es`
-    );
+    return await fetchApi(`/api/weather/forecast?lat=${lat}&lon=${lon}`);
   },
 
   /**

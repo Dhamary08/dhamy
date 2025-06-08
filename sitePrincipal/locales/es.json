@@ -148,7 +148,15 @@
     "loadingWeather": "Cargando clima...",
     "loadingForecast": "Cargando pronóstico...",
     "errorLocation": "Error al obtener ubicación",
-    "errorWeather": "Error al obtener el clima"
+    "errorWeather": "Error al obtener el clima",
+    "errorForecast": "Error al obtener el pronóstico",
+    "errorApiKey": "API key inválida. Por favor configura una API key válida de OpenWeatherMap.",
+    "errorCityNotFound": "Ciudad '{city}' no encontrada",
+    "errorGeolocation": "La geolocalización no está disponible en este navegador",
+    "errorLocationPermission": "Permiso de ubicación denegado",
+    "errorLocationUnavailable": "Ubicación no disponible",
+    "errorLocationTimeout": "Tiempo de espera agotado para obtener ubicación",
+    "demoDataNotice": "⚠️ Mostrando datos de ejemplo. Configura tu API key de OpenWeatherMap para datos reales."
   },
   "blog": {
     "title": "Blog",
