@@ -9,15 +9,15 @@
           class="search-input"
           @keyup.enter="handleSearch"
         />
-        <button @click="handleSearch" class="search-button" :disabled="loading">
+        <button class="search-button" :disabled="loading" @click="handleSearch">
           🔍
         </button>
       </div>
 
       <button
-        @click="handleLocationSearch"
         class="location-button"
         :disabled="loading"
+        @click="handleLocationSearch"
       >
         📍 Mi ubicación
       </button>

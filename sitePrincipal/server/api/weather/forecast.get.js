@@ -5,8 +5,7 @@ export default defineEventHandler(async (event) => {
   const { city, lat, lon } = query;
 
   // API Key - en producción debería estar en variables de entorno
-  const API_KEY =
-    process.env.OPENWEATHER_API_KEY || "b337851b26efb2dcde1d47cd130ba016";
+  const API_KEY = process.env.OPENWEATHER_API_KEY || "demo_key"; // Usa una clave de demo si no está configurada
   const BASE_URL = "https://api.openweathermap.org/data/2.5";
 
   try {
