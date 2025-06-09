@@ -1,10 +1,10 @@
 <template>
   <div class="language-selector">
     <button
-      @click="toggleDropdown"
       class="language-button"
       :aria-label="t('navigation.language')"
       :title="t('navigation.language')"
+      @click="toggleDropdown"
     >
       <span class="current-flag">{{ currentLocale.flag }}</span>
       <span class="current-name">{{ currentLocale.name }}</span>
@@ -15,9 +15,9 @@
       <button
         v-for="localeOption in availableLocales"
         :key="localeOption.code"
-        @click="selectLanguage(localeOption.code)"
         class="language-option"
         :class="{ active: locale === localeOption.code }"
+        @click="selectLanguage(localeOption.code)"
       >
         <span class="option-flag">{{ localeOption.flag }}</span>
         <span class="option-name">{{ localeOption.name }}</span>

@@ -1,10 +1,10 @@
 <template>
   <div class="theme-toggle">
     <button
-      @click="toggleTheme"
       class="theme-toggle-button"
       :aria-label="isDark ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro'"
       :title="isDark ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro'"
+      @click="toggleTheme"
     >
       <span class="theme-icon">
         {{ isDark ? "☀️" : "🌙" }}
@@ -20,7 +20,7 @@
       class="theme-dropdown"
       :class="{ open: dropdownOpen }"
     >
-      <button @click="toggleDropdown" class="theme-dropdown-trigger">
+      <button class="theme-dropdown-trigger" @click="toggleDropdown">
         <span class="dropdown-icon">⚙️</span>
       </button>
 
@@ -28,9 +28,9 @@
         <button
           v-for="option in themeOptions"
           :key="option.value"
-          @click="selectTheme(option.value)"
           class="theme-option"
           :class="{ active: theme === option.value }"
+          @click="selectTheme(option.value)"
         >
           <span class="option-icon">{{ option.icon }}</span>
           <span class="option-text">{{ option.label }}</span>

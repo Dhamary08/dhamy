@@ -27,8 +27,8 @@
       <button
         v-for="city in suggestions"
         :key="city"
-        @click="selectSuggestion(city)"
         class="suggestion-item"
+        @click="selectSuggestion(city)"
       >
         {{ city }}
       </button>

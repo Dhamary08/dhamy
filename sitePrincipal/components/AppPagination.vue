@@ -2,10 +2,10 @@
   <div class="pagination">
     <div class="pagination-controls">
       <button
-        @click="onPageChange(currentPage - 1)"
         class="pagination-button"
         :disabled="currentPage <= 1"
         aria-label="Página anterior"
+        @click="onPageChange(currentPage - 1)"
       >
         &laquo; Anterior
       </button>
@@ -14,9 +14,9 @@
         <!-- Primera página -->
         <button
           v-if="showFirstButton"
-          @click="onPageChange(1)"
           class="pagination-page"
           :class="{ active: currentPage === 1 }"
+          @click="onPageChange(1)"
         >
           1
         </button>
@@ -28,9 +28,9 @@
         <button
           v-for="page in visiblePages"
           :key="page"
-          @click="onPageChange(page)"
           class="pagination-page"
           :class="{ active: currentPage === page }"
+          @click="onPageChange(page)"
         >
           {{ page }}
         </button>
@@ -41,19 +41,19 @@
         <!-- Última página -->
         <button
           v-if="showLastButton && totalPages > 1"
-          @click="onPageChange(totalPages)"
           class="pagination-page"
           :class="{ active: currentPage === totalPages }"
+          @click="onPageChange(totalPages)"
         >
           {{ totalPages }}
         </button>
       </div>
 
       <button
-        @click="onPageChange(currentPage + 1)"
-        class="pagination-button"
         :disabled="currentPage >= totalPages"
         aria-label="Página siguiente"
+        class="pagination-button"
+        @click="onPageChange(currentPage + 1)"
       >
         Siguiente &raquo;
       </button>
@@ -67,8 +67,8 @@
         <select
           id="page-size"
           :value="pageSize"
-          @change="onPageSizeChange($event.target.value)"
           class="page-size-select"
+          @change="onPageSizeChange($event.target.value)"
         >
           <option v-for="size in pageSizes" :key="size" :value="size">
             {{ size }}
