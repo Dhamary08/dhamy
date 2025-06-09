@@ -6,6 +6,7 @@
     "weather": "Clima",
     "blog": "Blog",
     "contact": "Contacto",
+    "ai": "IA",
     "loading": "Cargando...",
     "error": "Error",
     "search": "Buscar",
@@ -20,6 +21,83 @@
     "email": "Correo electrónico",
     "subject": "Asunto",
     "message": "Mensaje"
+  },
+  "ai": {
+    "title": "Inteligencia Artificial",
+    "description": "Explora nuestras herramientas de IA avanzadas para generar contenido, analizar texto y obtener asistencia inteligente.",
+    "assistantName": "Asistente IA",
+    "online": "En línea",
+    "openChat": "Abrir chat",
+    "typePlaceholder": "Escribe tu mensaje...",
+    "welcomeMessage": "¡Hola! Soy tu asistente virtual. ¿En qué puedo ayudarte hoy?",
+    "errorMessage": "Lo siento, no pude procesar tu mensaje. ¿Puedes intentarlo de nuevo?",
+    "features": {
+      "title": "Funcionalidades de IA",
+      "contentGenerator": {
+        "title": "Generador de Contenido",
+        "description": "Crea contenido de alta calidad para blogs, redes sociales y marketing con IA."
+      },
+      "textAnalyzer": {
+        "title": "Analizador de Texto",
+        "description": "Analiza sentimientos, extrae palabras clave y obtén insights de cualquier texto."
+      },
+      "chatbot": {
+        "title": "Chatbot Inteligente",
+        "description": "Asistente virtual disponible 24/7 para responder tus preguntas."
+      }
+    },
+    "tryFeature": "Probar función",
+    "selectFeature": "Selecciona una función de IA",
+    "selectFeatureDescription": "Elige una de las funciones de IA de arriba para comenzar a explorar.",
+    "contentGenerator": {
+      "title": "Generador de Contenido con IA",
+      "description": "Utiliza inteligencia artificial para crear contenido profesional y atractivo.",
+      "type": "Tipo de contenido",
+      "prompt": "Descripción del contenido",
+      "promptPlaceholder": "Describe qué tipo de contenido quieres generar...",
+      "language": "Idioma",
+      "tone": "Tono",
+      "generate": "Generar contenido",
+      "generating": "Generando...",
+      "result": "Contenido generado",
+      "copy": "Copiar",
+      "copied": "¡Copiado!",
+      "clear": "Limpiar",
+      "types": {
+        "blogPost": "Artículo de blog",
+        "serviceDescription": "Descripción de servicio",
+        "metaDescription": "Meta descripción",
+        "socialMedia": "Contenido para redes sociales"
+      },
+      "tones": {
+        "professional": "Profesional",
+        "casual": "Casual",
+        "creative": "Creativo",
+        "technical": "Técnico"
+      }
+    },
+    "textAnalyzer": {
+      "title": "Analizador de Texto con IA",
+      "description": "Analiza cualquier texto para obtener insights sobre sentimientos, palabras clave y más.",
+      "inputLabel": "Texto a analizar",
+      "inputPlaceholder": "Pega aquí el texto que quieres analizar...",
+      "analyze": "Analizar texto",
+      "analyzing": "Analizando...",
+      "results": "Resultados del análisis",
+      "sentiment": "Sentimiento",
+      "sentimentScore": "Puntuación de sentimiento",
+      "keywords": "Palabras clave",
+      "summary": "Resumen",
+      "language": "Idioma detectado",
+      "readability": "Legibilidad",
+      "suggestions": "Sugerencias de mejora",
+      "metrics": "Métricas",
+      "sentiments": {
+        "positive": "Positivo",
+        "negative": "Negativo",
+        "neutral": "Neutral"
+      }
+    }
   },
   "navigation": {
     "toggleTheme": "Cambiar tema",

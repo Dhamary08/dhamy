@@ -32,6 +32,11 @@
             }}</NuxtLink>
           </li>
           <li>
+            <NuxtLink to="/ai" class="nav-link ai-link"
+              >{{ t("common.ai") }} ✨</NuxtLink
+            >
+          </li>
+          <li>
             <NuxtLink to="/contact" class="nav-link">{{
               t("common.contact")
             }}</NuxtLink>
@@ -103,6 +108,14 @@ const { t } = useI18n();
 
 .nav-link:hover {
   color: var(--color-primary);
+}
+
+.ai-link {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
 }
 
 .header-actions {
